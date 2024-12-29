@@ -46,7 +46,7 @@ func (a *GithubApp) Initialize() error {
 	}
 	browser, err := pw.Chromium.Launch(playwright.BrowserTypeLaunchOptions{
 		Channel:  playwright.String("chrome"),
-		Headless: playwright.Bool(false),
+		Headless: playwright.Bool(true),
 	})
 	if err != nil {
 		return fmt.Errorf("could not launch browser: %v", err)
